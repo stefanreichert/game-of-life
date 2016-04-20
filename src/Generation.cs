@@ -52,7 +52,6 @@ namespace GameOfLife
             {
                 int neighbourRowIndex = coordinate[0];
                 int neighbourColumnIndex = coordinate[1];
-                Console.WriteLine(neighbourColumnIndex + "-" + neighbourRowIndex);
                 cell.AddNeighbour(grid[neighbourRowIndex][neighbourColumnIndex]);
             }
         }
