@@ -24,12 +24,12 @@ namespace GameOfLife
             for (int cellIndex = 0; cellIndex < cells.Count; cellIndex++)
             {
                 Cell cell = cells[cellIndex];
-                IEnumerable<int[]> neighbourCoordinates = evaluateValidNeighbourCoordinates(cellIndex, columnCount, rowCount);
+                IEnumerable<int[]> neighbourCoordinates = EvaluateValidNeighbourCoordinates(cellIndex, columnCount, rowCount);
                 InitializeNeighboursForCell(cell, grid, neighbourCoordinates);
             }
         }
 
-        private IEnumerable<int[]> evaluateValidNeighbourCoordinates(int cellIndex, int columnCount, int rowCount)
+        private IEnumerable<int[]> EvaluateValidNeighbourCoordinates(int cellIndex, int columnCount, int rowCount)
         {
             int rowIndex = cellIndex / columnCount;
             int columIndex = cellIndex % columnCount;
